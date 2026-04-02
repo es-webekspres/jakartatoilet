@@ -48,8 +48,6 @@ cgi-bin/
 # ─── Assets duplikat (file dengan prefix #) ──────────────────────────────────
 assets/images/#*
 
-# ─── Analisis Website ────────────────────────────────────────────────────────
-analisis_website_jakartatoilet.md
-
 # ─── Rencana Peningkatan ───────────────────────────────────────────────────
 /gitignore
+*.md
