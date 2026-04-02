@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     // 1. Initialize Lenis
     const lenis = new window.Lenis({
-        duration: 1.2,
+        duration: 1.8,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
         direction: 'vertical',
         gestureDirection: 'vertical',
@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         el.removeAttribute('data-aos'); // remove AOS attr
         
         gsap.fromTo(el, 
-            { y: 60, opacity: 0 },
+            { y: 40, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1.2,
+                duration: 1.8,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: el,
@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fadeRightElements.forEach((el) => {
         el.removeAttribute('data-aos');
         gsap.fromTo(el, 
-            { x: -60, opacity: 0 },
+            { x: -40, opacity: 0 },
             {
                 x: 0,
                 opacity: 1,
-                duration: 1.2,
+                duration: 1.8,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: el,
@@ -76,11 +76,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fadeLeftElements.forEach((el) => {
         el.removeAttribute('data-aos');
         gsap.fromTo(el, 
-            { x: 60, opacity: 0 },
+            { x: 40, opacity: 0 },
             {
                 x: 0,
                 opacity: 1,
-                duration: 1.2,
+                duration: 1.8,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: el,
