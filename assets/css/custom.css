@@ -2,6 +2,16 @@
    Custom CSS for Jakarta Toilet Redesign
    ========================================================================= */
 
+/* --- 0. Global Overrides --- */
+.product-block-one .image-box {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.product-block-one .image-box img {
+    border-radius: 20px;
+    width: 100%;
+}
+
 /* --- 1. About Gallery Section --- */
 .jt-about-gallery-section {
     position: relative;
