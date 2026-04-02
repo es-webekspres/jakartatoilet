@@ -1,0 +1,53 @@
+# ===========================
+#  Jakarta Toilet — .gitignore
+# ===========================
+
+# ─── WordPress Backup (folder bk/) ───────────────────────────────────────────
+bk/
+
+# ─── OS Files ────────────────────────────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# ─── Editor & IDE ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── Logs & Temp ─────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+
+# ─── Sensitive / Config ──────────────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+
+# ─── CGI-BIN ─────────────────────────────────────────────────────────────────
+cgi-bin/
+
+# ─── Assets duplikat (file dengan prefix #) ──────────────────────────────────
+assets/images/#*
+
+# ─── Analisis Website ────────────────────────────────────────────────────────
+analisis_website_jakartatoilet.md
+

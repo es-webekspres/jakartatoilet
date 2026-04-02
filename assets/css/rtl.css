@@ -1,0 +1,235 @@
+
+
+.rtl {
+  direction: rtl; 
+}
+
+.ltr {
+  direction: ltr; 
+}
+
+.rtl .banner-carousel{
+  direction: ltr;
+}
+
+.rtl .pull-left{
+  float: right;
+}
+
+.rtl .pull-right{
+  float: left;
+}
+
+.rtl .main-menu .navigation > li > ul > li > a, 
+.rtl .main-menu .navigation > li > .megamenu li > a{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation li.dropdown .megamenu li h4{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul > li > a{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation > li > ul > li.dropdown > a:after{
+  right: inherit;
+  left: 20px;
+  content: "\f104";
+}
+
+.rtl .mobile-menu{
+  text-align: right;
+}
+
+.rtl .mobile-menu .nav-logo{
+  text-align: right;
+}
+
+.rtl .mobile-menu .navigation li > a:before{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .mobile-menu .navigation li.dropdown .dropdown-btn{
+  right: inherit;
+  left: 6px;
+}
+
+.rtl .mobile-menu .navigation li.dropdown .dropdown-btn.open{
+  transform: rotate(-90deg);
+}
+
+.rtl .main-menu .navigation > li{
+  float: right;
+}
+
+.rtl .header-top .top-inner p a{
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.rtl .main-header .nav-right-content .nav-box{
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.rtl .main-header .nav-right-content .btn-box a i{
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.rtl .main-header .search-box-outer .dropdown-menu{
+  left: 0px !important;
+  right: auto !important;
+}
+
+.rtl .main-header .menu-right-content{
+  margin-left: 0px;
+  margin-right: 7px;
+}
+
+.rtl .experience-section .single-item .inner-box{
+  padding-left: 0px;
+  padding-right: 240px;
+  text-align: right;
+}
+
+.rtl .experience-section .progress-box{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .experience-section .single-item .inner-box .content-box a i{
+  margin-left: 0px;
+  margin-right: 8px;
+}
+
+.rtl .sec-title{
+  text-align: right;
+}
+
+.rtl .content_block_3 .content-box .text{
+  text-align: right;
+}
+
+.rtl .image_block_2 .image-box{
+  margin-right: 0px;
+  margin-left: 60px;
+}
+
+.rtl .product-block-one .inner-box .lower-content{
+  text-align: right;
+}
+
+.rtl .product-section.alternat-2 .product-block-one .inner-box .lower-content .price{
+  right: inherit;
+  left: 30px;
+}
+
+.rtl .product-block-one .inner-box .lower-content .rating li{
+  float: right;
+  margin-right: 0px;
+  margin-left: 6px;
+}
+
+.rtl .faq-section .image-box .bg-layer{
+  right: inherit;
+  left: 245px;
+}
+
+.rtl .faq-section .image-box{
+  margin-right: 0px;
+  margin-left: 85px;
+}
+
+.rtl .content_block_4 .content-box{
+  margin-left: 0px;
+  margin-right: 40px;
+  text-align: right;
+}
+
+.rtl .single-item-carousel{
+  direction: ltr;
+}
+
+.rtl .testimonial-style-two .content-column{
+  float: right;
+}
+
+.rtl .testimonial-style-two .bg-layer{
+  right: inherit;
+  left: 0px;
+}
+
+.rtl .news-block-two .inner-box .lower-content{
+  text-align: right;
+}
+
+.rtl .news-block-two .inner-box .lower-content .post-info li{
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
+.rtl .news-block-two .inner-box .lower-content .post-info li i{
+  margin-right: 0px;
+  margin-left: 8px;
+}
+
+.rtl .news-block-two .inner-box .lower-content .link a i{
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.rtl .clients-carousel{
+  direction: ltr;
+}
+
+.rtl .main-footer .widget-section{
+  text-align: right;
+}
+
+.rtl .footer-widget.contact-widget.ml-40{
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+.rtl .main-footer .widget-section .contact-widget .info-list li{
+  padding-left: 0px;
+  padding-right: 45px;
+}
+
+.rtl .main-footer .widget-section .contact-widget .info-list li i{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .footer-widget.links-widget.ml-70{
+  margin-left: 0px;
+  margin-right: 70px;
+}
+
+.rtl .main-footer .widget-section .about-widget{
+  margin-right: 0px;
+  margin-left: 100px;
+}
+
+.rtl .main-footer .widget-section .about-widget .social-links li:before{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .main-footer .widget-section .about-widget .social-links li:last-child:after{
+  right: inherit;
+  left: 0px;
+}
+
+.rtl .main-footer .widget-section .about-widget .social-links li a i{
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.rtl .sidebar-textwidget{
+  text-align: right;
+}
