@@ -201,8 +201,10 @@
             loop:true,
 			margin:0,
 			nav:true,
-			active: true,
-			smartSpeed: 2000,
+			animateOut: 'fadeOut',
+    		animateIn: 'fadeIn',
+    		active: true,
+			smartSpeed: 1000,
 			autoplay: 6000,
             navText: [ '<span class="flaticon-left-arrow"></span>', '<span class="flaticon-right-arrow"></span>' ],
             responsive:{
