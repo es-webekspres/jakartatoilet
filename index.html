@@ -1183,29 +1183,81 @@ toilet portable sewa, jasa sewa toilet portable, jasa rental toilet portable, ja
                         <div class="jt-contact-form">
                             <form action="https://api.whatsapp.com/send" method="get" target="_blank" id="jt-wa-form">
                                 <input type="hidden" name="phone" value="6285173335004">
+                                <div class="form-header">
+                                    <h3>Form Pemesanan Cepat</h3>
+                                    <p>Lengkapi data berikut untuk mendapatkan konfirmasi harga dan ketersediaan lebih cepat.</p>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <input type="text" id="wa_name" placeholder="Nama Anda" required>
+                                        <label class="form-label" for="wa_name">Nama Lengkap <span>(wajib)</span></label>
+                                        <input type="text" id="wa_name" placeholder="Nama Lengkap" required>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input type="text" id="wa_subject" placeholder="Subjek" required>
+                                        <label class="form-label" for="wa_subject">Produk yang di Sewa/Beli <span>(wajib)</span></label>
+                                        <select id="wa_subject" class="ignore" required>
+                                            <option value="">Pilih Produk</option>
+                                            <option value="TPU-L01 PORTABLE URINAL">TPU-L01 PORTABLE URINAL</option>
+                                            <option value="PS-H02 SHOWER">PS-H02 SHOWER</option>
+                                            <option value="TPT-H02 PORTABLE TOILET">TPT-H02 PORTABLE TOILET</option>
+                                            <option value="TPT-L03 PORTABLE TOILET">TPT-L03 PORTABLE TOILET</option>
+                                            <option value="TPT-H01 PORTABLE TOILET">TPT-H01 PORTABLE TOILET</option>
+                                            <option value="TPT-L04 PORTABLE TOILET">TPT-L04 PORTABLE TOILET</option>
+                                            <option value="TPW-L02 HAND WASH STATION">TPW-L02 HAND WASH STATION</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="form-label" for="wa_date">Tanggal Mulai <span>(wajib)</span></label>
+                                        <input type="date" id="wa_date" required>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="form-label" for="wa_qty">Jumlah Unit <span>(wajib)</span></label>
+                                        <input type="number" id="wa_qty" min="1" placeholder="Jumlah Unit" required>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="form-label" for="wa_duration">Durasi Sewa <span>(wajib)</span></label>
+                                        <select id="wa_duration" class="ignore" required>
+                                            <option value="">Pilih Durasi Sewa</option>
+                                            <option value="1 hari">1 hari</option>
+                                            <option value="3 hari">3 hari</option>
+                                            <option value="1 minggu">1 minggu</option>
+                                            <option value="1 bulan">1 bulan</option>
+                                            <option value="Custom (diskusikan)">Custom (diskusikan)</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <textarea id="wa_message" placeholder="Pesan Anda" required></textarea>
+                                        <label class="form-label" for="wa_message">Catatan Tambahan <span>(opsional)</span></label>
+                                        <textarea id="wa_message" placeholder="Catatan tambahan (opsional, sertakan lokasi pengiriman/acara)"></textarea>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <button type="button" class="submit-btn" onclick="sendWhatsApp()">Hubungi via
+                                        <button type="button" class="submit-btn" onclick="sendWhatsApp()">Kirim Permintaan via
                                             WhatsApp <i class="fab fa-whatsapp"></i></button>
+                                        <p class="form-note">Dengan mengirim form ini, Anda akan diarahkan ke WhatsApp resmi Jakarta Toilet.</p>
                                     </div>
                                 </div>
                             </form>
                             <script>
                                 function sendWhatsApp() {
-                                    var name = document.getElementById("wa_name").value;
+                                    var name = document.getElementById("wa_name").value.trim();
                                     var subject = document.getElementById("wa_subject").value;
-                                    var message = document.getElementById("wa_message").value;
+                                    var qty = document.getElementById("wa_qty").value;
+                                    var date = document.getElementById("wa_date").value;
+                                    var duration = document.getElementById("wa_duration").value;
+                                    var message = document.getElementById("wa_message").value.trim();
 
-                                    var text = "Halo *Jakarta Toilet*! Saya " + name + ".\n\nTerkait: " + subject + "\n\n" + message;
+                                    if (!name || !subject || !qty || !date || !duration) {
+                                        alert("Mohon lengkapi semua data wajib terlebih dahulu.");
+                                        return;
+                                    }
+
+                                    var text = "Halo *Jakarta Toilet*! Saya ingin melakukan pemesanan.\n\n" +
+                                        "Detail Pesanan:\n" +
+                                        "- Nama: " + name + "\n" +
+                                        "- Produk: " + subject + "\n" +
+                                        "- Jumlah Unit: " + qty + "\n" +
+                                        "- Tanggal Mulai: " + date + "\n" +
+                                        "- Durasi Sewa: " + duration + "\n" +
+                                        "- Catatan (termasuk lokasi): " + (message ? message : "-") + "\n\n" +
+                                        "Mohon info harga dan ketersediaannya. Terima kasih.";
                                     var encodedText = encodeURIComponent(text);
 
                                     window.open("https://api.whatsapp.com/send/?phone=6285173335004&text=" + encodedText, "_blank");
