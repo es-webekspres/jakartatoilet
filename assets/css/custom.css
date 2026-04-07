@@ -393,11 +393,15 @@ html.lenis {
     left: 0;
     width: 100%;
     z-index: 9999;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.10);
-    border-bottom: none !important;
+    /* Gradient from #005eb8 (left) to #2dd3aa (right) — matches site theme */
+    background: linear-gradient(to right,
+        rgba(0, 94, 184, 0.97) 0%,
+        rgba(45, 211, 170, 0.95) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 4px 28px rgba(0, 45, 100, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
     /* Hidden state — GSAP will animate this */
     opacity: 0 !important;
     visibility: hidden !important;
@@ -416,13 +420,19 @@ html.lenis {
     padding: 22px 0px;
 }
 
-/* Sticky header nav links: use dark text */
+/* Sticky header nav links: white text for dark background */
 .sticky-header .main-menu .navigation > li > a {
-    color: #222222;
+    color: #ffffff;
 }
 
 .sticky-header .main-menu .navigation > li.dropdown > a:before {
-    color: #222222;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Hover state on sticky nav */
+.sticky-header .main-menu .navigation > li > a:hover,
+.sticky-header .main-menu .navigation > li.current > a {
+    color: #2dd3aa;
 }
 
 /* Do NOT show the old .fixed-header sticky behavior (GSAP handles it) */
