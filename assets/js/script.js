@@ -10,16 +10,14 @@
 	}
 	
 	//Update Header Style and Scroll to Top
+	// Scroll-up sticky: handled by GSAP in gsap-custom.js — keep scroll-top button logic here only
 	function headerStyle() {
 		if($('.main-header').length){
 			var windowpos = $(window).scrollTop();
-			var siteHeader = $('.main-header');
 			var scrollLink = $('.scroll-top');
 			if (windowpos >= 110) {
-				siteHeader.addClass('fixed-header');
 				scrollLink.addClass('open');
 			} else {
-				siteHeader.removeClass('fixed-header');
 				scrollLink.removeClass('open');
 			}
 		}

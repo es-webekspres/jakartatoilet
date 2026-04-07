@@ -365,3 +365,70 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* ========================================================================= */
+/* --- 5. Slim Header & Scroll-Up Sticky Behavior --- */
+
+/* Reduce nav item padding to slim the header */
+.main-menu .navigation > li {
+    padding: 28px 0px;
+}
+
+/* Slim the logo area */
+.main-header .logo-box .logo img {
+    max-height: 52px;
+    width: auto;
+}
+
+/* Slim button padding in header */
+.main-header .nav-right-content .btn-box a {
+    padding: 10px 24px;
+    font-size: 13px;
+}
+
+/* --- Sticky Header: GSAP-controlled, hidden by default --- */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.10);
+    border-bottom: none !important;
+    /* Hidden state — GSAP will animate this */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-110%);
+    transition: none !important; /* Let GSAP handle all transitions */
+}
+
+/* When GSAP adds .header-visible, show it */
+.sticky-header.header-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Slim sticky nav items */
+.sticky-header .main-menu .navigation > li {
+    padding: 22px 0px;
+}
+
+/* Sticky header nav links: use dark text */
+.sticky-header .main-menu .navigation > li > a {
+    color: #222222;
+}
+
+.sticky-header .main-menu .navigation > li.dropdown > a:before {
+    color: #222222;
+}
+
+/* Do NOT show the old .fixed-header sticky behavior (GSAP handles it) */
+.fixed-header .sticky-header {
+    animation: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+

@@ -119,4 +119,63 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         });
     });
+
+    // =========================================================================
+    // 6. Scroll-Up Sticky Header (GSAP-powered)
+    // =========================================================================
+    const stickyHeader = document.querySelector('.sticky-header');
+
+    if (stickyHeader) {
+        let lastScrollY = 0;
+        let headerVisible = false;
+        const SCROLL_THRESHOLD = 120; // px before sticky kicks in at all
+
+        // Set initial hidden state
+        gsap.set(stickyHeader, { y: '-110%', opacity: 0, visibility: 'hidden' });
+
+        function showHeader() {
+            if (!headerVisible) {
+                headerVisible = true;
+                stickyHeader.classList.add('header-visible');
+                gsap.to(stickyHeader, {
+                    y: '0%',
+                    opacity: 1,
+                    visibility: 'visible',
+                    duration: 0.45,
+                    ease: 'power3.out',
+                });
+            }
+        }
+
+        function hideHeader() {
+            if (headerVisible) {
+                headerVisible = false;
+                gsap.to(stickyHeader, {
+                    y: '-110%',
+                    opacity: 0,
+                    duration: 0.35,
+                    ease: 'power3.inOut',
+                    onComplete: () => {
+                        stickyHeader.classList.remove('header-visible');
+                        gsap.set(stickyHeader, { visibility: 'hidden' });
+                    }
+                });
+            }
+        }
+
+        // Use Lenis scroll event for direction detection
+        lenis.on('scroll', ({ scroll, direction }) => {
+            // direction: 1 = scrolling down, -1 = scrolling up
+            if (scroll < SCROLL_THRESHOLD) {
+                hideHeader();
+            } else if (direction === -1) {
+                // Scrolling UP — show sticky header
+                showHeader();
+            } else if (direction === 1) {
+                // Scrolling DOWN — hide sticky header
+                hideHeader();
+            }
+        });
+    }
 });
+
