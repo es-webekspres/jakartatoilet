@@ -2,6 +2,51 @@
    Custom CSS for Jakarta Toilet Redesign
    ========================================================================= */
 
+/* =========================================================================
+   --- 0. Global Rounded Card Elements ---
+   ========================================================================= */
+
+/* Product cards - image box */
+.product-block-one .inner-box {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.product-block-one .inner-box .image-box {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+/* Feature boxes (What We Offer section) */
+.feature-block-one .inner-box {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* About section image block */
+.image_block_1 .image-box,
+.content_block_2 .content-box .image-box {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* News / Blog cards */
+.news-block-one .inner-box {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.news-block-one .inner-box .image-box {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+/* Client logo boxes in carousel */
+.clients-carousel .slide-item .inner-box,
+.clients-carousel .owl-item .inner-box {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
 /* --- 1. About Gallery Section --- */
 .jt-about-gallery-section {
     position: relative;
