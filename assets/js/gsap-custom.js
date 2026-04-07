@@ -2,12 +2,12 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     // 1. Initialize Lenis
     const lenis = new window.Lenis({
-        duration: 1.8,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
         smoothTouch: false,
         touchMultiplier: 2,
         infinite: false,
@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Sync Lenis with ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time)=>{
+    gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
     });
-    
+
     gsap.ticker.lagSmoothing(0);
 
     // Force WOW items to be visible so GSAP can take over smoothly
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // 2. Global Fade-up elements (Replacing AOS and existing WOW)
     const fadeUpElements = document.querySelectorAll('[data-aos="fade-up"], .sec-title, .product-block-one, .news-block-one, .jt-social-reel-section .sec-title');
-    
+
     fadeUpElements.forEach((el) => {
         el.removeAttribute('data-aos'); // remove AOS attr
-        
-        gsap.fromTo(el, 
+
+        gsap.fromTo(el,
             { y: 40, opacity: 0 },
             {
                 y: 0,
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const fadeRightElements = document.querySelectorAll('[data-aos="fade-right"], .content_block_1, .content_block_2');
     fadeRightElements.forEach((el) => {
         el.removeAttribute('data-aos');
-        gsap.fromTo(el, 
+        gsap.fromTo(el,
             { x: -40, opacity: 0 },
             {
                 x: 0,
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const fadeLeftElements = document.querySelectorAll('[data-aos="fade-left"], .feature-inner, .image_block_1');
     fadeLeftElements.forEach((el) => {
         el.removeAttribute('data-aos');
-        gsap.fromTo(el, 
+        gsap.fromTo(el,
             { x: 40, opacity: 0 },
             {
                 x: 0,
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 trigger: img.closest('.gallery-item'),
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true
+                scrub: 1
             }
         });
     });
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 trigger: ".banner-section",
                 start: "top top",
                 end: "bottom top",
-                scrub: true
+                scrub: 1
             }
         });
     });
