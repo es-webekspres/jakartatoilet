@@ -76,13 +76,7 @@
 		});
 	}
 
-	// Elements Animation
-	if($('.wow').length){
-		var wow = new WOW({
-		mobile:       false
-		});
-		wow.init();
-	}
+	// Elements Animation handled by GSAP in gsap-custom.js
 
 	//Contact Form Validation
 	if($('#contact-form').length){
