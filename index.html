@@ -627,6 +627,92 @@ toilet portable sewa, jasa sewa toilet portable, jasa rental toilet portable, ja
         </section>
         <!-- about-section end -->
 
+        <!-- team-section -->
+        <section class="jt-team-section" id="team">
+            <div class="auto-container">
+                <div class="sec-title centred" data-aos="fade-up">
+                    <p>Meet Our Team</p>
+                    <h2>Profesional di Balik Layanan Terbaik Kami</h2>
+                </div>
+                <div class="team-carousel owl-carousel owl-theme" data-aos="fade-up" data-aos-delay="200">
+                    
+                    <!-- Team Block 1 -->
+                    <div class="team-card">
+                        <div class="card-inner">
+                            <div class="image-box">
+                                <img src="assets/images/resource/testimonial-1.png" alt="Team Member">
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="lower-content">
+                                <h3>Budi Santoso</h3>
+                                <span class="designation">Operation Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block 2 -->
+                    <div class="team-card">
+                        <div class="card-inner">
+                            <div class="image-box">
+                                <img src="assets/images/resource/testimonial-2.png" alt="Team Member">
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="lower-content">
+                                <h3>Ahmad Fauzi</h3>
+                                <span class="designation">Technical Lead</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block 3 -->
+                    <div class="team-card">
+                        <div class="card-inner">
+                            <div class="image-box">
+                                <img src="assets/images/resource/review-1.png" alt="Team Member">
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="lower-content">
+                                <h3>Rina Melati</h3>
+                                <span class="designation">Customer Relation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Block 4 -->
+                    <div class="team-card">
+                        <div class="card-inner">
+                            <div class="image-box">
+                                <img src="assets/images/resource/review-2.png" alt="Team Member">
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="lower-content">
+                                <h3>Dimas Aryo</h3>
+                                <span class="designation">Field Supervisor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- team-section end -->
+
         <!-- about-gallery-section -->
         <section class="jt-about-gallery-section">
             <div class="auto-container">
@@ -1475,6 +1561,32 @@ toilet portable sewa, jasa sewa toilet portable, jasa rental toilet portable, ja
                         items: 3,
                         margin: 20,
                         stagePadding: 0
+                    }
+                }
+            })
+        }
+        // Initialize Owl Carousel for Team Carousel
+        if ($('.team-carousel').length) {
+            $('.team-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
                     }
                 }
             })
