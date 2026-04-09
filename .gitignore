@@ -51,3 +51,4 @@ assets/images/#*
 # ─── Rencana Peningkatan ───────────────────────────────────────────────────
 /gitignore
 *.md
+/_legacy_src
