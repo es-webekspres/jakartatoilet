@@ -1260,13 +1260,13 @@ html.lenis {
 
 /* Perapihan Layout Product lower-content */
 .product-block-one .lower-content {
-    padding: 20px 20px 20px !important;
+    padding: 25px 20px 20px !important;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    min-height: 180px;
+    justify-content: flex-start;
+    min-height: 220px;
 }
 
 .product-block-one .lower-content .rating {
@@ -1366,3 +1366,5 @@ html.lenis {
     color: #222;
     margin-right: 8px;
 }
+
+
