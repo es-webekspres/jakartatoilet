@@ -1330,8 +1330,39 @@ html.lenis {
 .feature-section, 
 .about-section, 
 .jt-team-section, 
+.jt-area-layanan-section,
 .jt-about-gallery-section, 
 .jt-social-reel-section, 
 .jt-contact-section {
     padding: 80px 0 !important;
+}
+
+/* Area Layanan Section */
+.area-card {
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #222;
+}
+.area-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
+}
+.area-card h3 i {
+    color: #222;
+    margin-right: 8px;
 }
