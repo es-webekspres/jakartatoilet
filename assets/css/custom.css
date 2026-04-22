@@ -1181,17 +1181,114 @@ html.lenis {
 }
 
 .jt-team-section .owl-dots .owl-dot span {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(0, 94, 184, 0.2);
+    background: #dbe9fb;
     display: block;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
 }
 
-.jt-team-section .owl-dots .owl-dot.active span,
-.jt-team-section .owl-dots .owl-dot:hover span {
+.jt-team-section .owl-dots .owl-dot.active span {
     background: #005eb8;
-    width: 25px;
-    border-radius: 5px;
+    width: 32px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 94, 184, 0.3);
+}
+
+.jt-team-section .owl-dots .owl-dot:hover span {
+    background: #7ca8e2;
+}
+
+/* Nav Prev/Next Buttons */
+.jt-team-section .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.jt-team-section .owl-nav button.owl-prev,
+.jt-team-section .owl-nav button.owl-next {
+    pointer-events: auto;
+    width: 44px;
+    height: 44px;
+    background: #ffffff !important;
+    color: #005eb8 !important;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e1e8f2 !important;
+    margin: 0 -22px; /* Pull outside carousel */
+}
+
+.jt-team-section .owl-nav button.owl-prev:hover,
+.jt-team-section .owl-nav button.owl-next:hover {
+    background: #005eb8 !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 94, 184, 0.3);
+}
+
+.jt-team-section .owl-nav button i {
+    font-size: 16px;
+}
+
+.jt-team-section .owl-nav button.owl-prev::before {
+    content: "\f060"; /* FontAwesome arrow-left */
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.jt-team-section .owl-nav button.owl-next::before {
+    content: "\f061"; /* FontAwesome arrow-right */
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* Hide default text from Owl Carousel prev/next if any */
+.jt-team-section .owl-nav button span {
+    display: none;
+}
+
+/* Optimize "Tanya Harga" Button */
+.btn-tanya-harga {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    background-color: #1b4b8a;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(27, 75, 138, 0.2);
+}
+
+.btn-tanya-harga:hover, .btn-tanya-harga:focus {
+    background-color: #123460;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(27, 75, 138, 0.4);
+}
+
+.btn-tanya-harga i {
+    margin-left: 8px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.btn-tanya-harga:hover i {
+    transform: translateX(5px);
 }
