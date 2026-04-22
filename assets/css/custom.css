@@ -1258,37 +1258,42 @@ html.lenis {
     display: none;
 }
 
-/* Optimize "Tanya Harga" Button */
-.btn-tanya-harga {
-    display: inline-flex;
+/* Perapihan Layout Product lower-content */
+.product-block-one .lower-content {
+    padding: 25px 20px 20px !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    min-height: 220px;
+}
+
+.product-block-one .lower-content .rating {
+    margin-bottom: 12px;
+    display: flex;
     justify-content: center;
-    padding: 12px 28px;
-    background-color: #1b4b8a;
-    color: #ffffff;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(27, 75, 138, 0.2);
+    width: 100%;
 }
 
-.btn-tanya-harga:hover, .btn-tanya-harga:focus {
-    background-color: #123460;
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(27, 75, 138, 0.4);
+.product-block-one .lower-content .text {
+    margin-bottom: 15px;
+    width: 100%;
 }
 
-.btn-tanya-harga i {
-    margin-left: 8px;
-    font-size: 14px;
-    transition: transform 0.3s ease;
+.product-block-one .lower-content .text h3 {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
 }
 
-.btn-tanya-harga:hover i {
-    transform: translateX(5px);
+.product-block-one .lower-content br {
+    display: none; /* Hide random breaks */
+}
+
+.product-block-one .lower-content .btn-box {
+    margin-top: auto;
+    width: 100%;
 }
