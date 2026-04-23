@@ -1110,20 +1110,21 @@ html.lenis {
     opacity: 1;
 }
 
-.team-card .social-links li a {
+.team-card .social-links .konsultasi-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    padding: 8px 24px;
     background: #ffffff;
     color: #005eb8;
-    border-radius: 50%;
-    font-size: 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.team-card .social-links li a:hover {
+.team-card .social-links .konsultasi-btn:hover {
     background: #2dd3aa;
     color: #ffffff;
     transform: translateY(-3px);
